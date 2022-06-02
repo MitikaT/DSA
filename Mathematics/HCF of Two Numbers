@@ -1,0 +1,19 @@
+https://practice.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1#
+
+Euclidean algorithm
+HCF(a,b)=HCF(a-b,b) when a>b
+
+class Solution
+{
+	public:
+    int gcd(int A, int B) 
+	{ 
+	    while(A!=B){
+	        if(A>B)
+	            A-=B;
+	        else 
+	            B-=A;
+	    }
+	    return B;
+	} 
+};
