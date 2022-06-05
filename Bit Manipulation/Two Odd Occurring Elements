@@ -1,0 +1,32 @@
+https://practice.geeksforgeeks.org/problems/two-numbers-with-odd-occurrences5846/1/#
+
+xor of all elements gives the xor of the two required elements
+find the rightmost set bit of this xor, split the array into two groups, one with 1 at the set bit position and one with zero
+xor all the elements of group 1, xor all the elements of group 2
+
+class Solution{
+    public:
+    vector<int> twoOddNum(int Arr[], int N)  
+    {
+        int XOR=0,res1=0,res2=0;
+        for(int i=0;i<N;i++)
+            XOR=XOR^Arr[i];
+        int set=XOR&(~(XOR-1));
+        for(int i=0;i<N;i++){
+            if((Arr[i]&set)!=0)
+                res1=res1^Arr[i];
+            else
+                res2=res2^Arr[i];
+        }
+        vector<int> odd;
+        if(res1>res2){
+            odd.push_back(res1);
+            odd.push_back(res2);
+        }
+        else{
+            odd.push_back(res2);
+            odd.push_back(res1);
+        }
+        return odd;
+    }
+};
