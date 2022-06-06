@@ -1,5 +1,7 @@
 https://leetcode.com/problems/subsets/
 
+each bit position represents an array element 
+
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
