@@ -3,15 +3,13 @@ https://practice.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1#
 Euclidean algorithm
 HCF(a,b)=HCF(a-b,b) when a>b
 
-class Solution
-{
-	public:
-    int gcd(int A, int B) 
-	{ 
-	    if(B==0)
-	        return A;
-	    gcd(B,A%B);
-	} 
+class Solution {
+public:
+    int gcd(int A, int B) { 
+	if(B==0)
+	    return A;
+	gcd(B,A%B);
+    } 
 };
 
 LCM(a,b)=ab/HCF(a,b)
