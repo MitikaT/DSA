@@ -1,0 +1,25 @@
+https://leetcode.com/problems/permutations/
+
+class Solution {
+public:
+    void swap(int &a,int &b){
+        int c;
+        c=a;
+        a=b;
+        b=c;
+    }
+    void perm(vector<vector<int>> &a,vector<int> &nums,int i=0){
+        if(i==nums.size()-1)
+            a.push_back(nums);
+        for(int j=i;j<nums.size();j++){
+            swap(nums[i],nums[j]);
+            perm(a,nums,i+1);
+            swap(nums[i],nums[j]);
+        }
+    }
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> a;
+        perm(a,nums);
+        return a;
+    }
+};
