@@ -1,6 +1,5 @@
 https://leetcode.com/problems/number-of-1-bits/
 
-Brian Kernighan's algorithm
 n-1's binary representation only has 1s after the place of the first 1 from the left in n 
 
 class Solution {
