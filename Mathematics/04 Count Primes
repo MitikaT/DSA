@@ -1,8 +1,7 @@
 https://leetcode.com/problems/count-primes/
 
-sieve of Eratosthenes
-boolean array a of size n is initialised with all values as true
-a[0],a[1] never accessed
+array a of size n is initialised with all values as true
+a[0] and a[1] are never accessed
 every multiple of a prime number is marked false 
 
 class Solution {
