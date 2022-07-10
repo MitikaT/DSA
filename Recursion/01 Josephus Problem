@@ -1,5 +1,10 @@
 https://practice.geeksforgeeks.org/problems/josephus-problem/1#
 
+starting from 0 the k-1th person is killed and kth person returned
+the kth person becomes 0 in the next recursive call
+to adjust this jos(n-1,k)+k is used 
+to make sure the value is from 0 to n-1, %n is used
+
 class Solution
 {
     public:
