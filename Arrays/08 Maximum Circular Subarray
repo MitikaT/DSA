@@ -2,12 +2,12 @@ https://leetcode.com/problems/maximum-sum-circular-subarray/
 
 class Solution {
 public:
-    int maxSubArray(vector<int>& nums){
+    int maxSubArray(vector<int>& nums){ //finds the maximum sum in the case of a regular array
         int res=nums[0];
         int max_ending=nums[0];
         for(int i=1;i<nums.size();i++){
-            max_ending=((max_ending+nums[i])>nums[i])?(max_ending+nums[i]):nums[i];
-            res=res>max_ending?res:max_ending;
+            max_ending=max(max_ending+nums[i],nums[i]);
+            res=max(res,max_ending);
         }
         return res;
     }
@@ -21,6 +21,6 @@ public:
             nums[i]=-nums[i];
         }
         int max_circular=arr_sum+maxSubArray(nums);
-        return max_normal>max_circular?max_normal:max_circular;
+        return max(max_normal,max_circular);
     }
 };
