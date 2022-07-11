@@ -2,7 +2,7 @@ https://leetcode.com/problems/rotate-array/
 
 class Solution {
 public:
-    void reverse(vector<int>& nums,int low,int high){
+    void reverse(vector<int>& nums,int low,int high){ //reverses array
         while(low<high){
             int temp=nums[low];
             nums[low]=nums[high];
