@@ -9,7 +9,7 @@ public:
                 curr=0;
             else{
                 curr++;
-                res=res>curr?res:curr;
+                res=max(res,curr);
             }
         }
         return res;
