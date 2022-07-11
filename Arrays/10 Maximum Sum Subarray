@@ -9,7 +9,7 @@ public:
         long max_sum=curr_sum;
         for(int i=K;i<N;i++){
             curr_sum+=(Arr[i]-Arr[i-K]);
-            max_sum=max_sum>curr_sum?max_sum:curr_sum;
+            max_sum=max(max_sum,curr_sum);
         }
         return max_sum;
     }
